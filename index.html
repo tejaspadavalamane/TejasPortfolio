@@ -1,0 +1,544 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>TejasPadavalamanePortfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			body::before {
+			content: "";
+			position: fixed;
+			top: 0; left: 0;
+			width: 100%; height: 100%;
+			background: linear-gradient(270deg, #00adb5, #393e46, #222831);
+			background-size: 600% 600%;
+			z-index: -1;
+			opacity: 0.15;
+			animation: gradientMove 15s ease infinite;
+		}
+		
+		@keyframes gradientMove {
+			0% { background-position: 0% 50%; }
+			50% { background-position: 100% 50%; }
+			100% { background-position: 0% 50%; }
+		}
+		.job-title {
+			font-size: 2em;
+			color: #333;
+			margin-top: 5px;
+		}
+		#intro h1 {
+			margin-bottom: 15px;
+		}
+
+			#intro .welcome {
+				font-size: 1.5em;
+				font-weight: bold;
+				text-align: center;
+				margin-bottom: 0.5em;
+			}
+
+			#intro .subtext {
+			text-align: center;
+			font-size: 1.3em;
+		}
+
+		.icons-row {
+			margin-top: 20px;
+			text-align: center;
+			animation: fadeIn 2s ease-in-out;
+		}
+
+		.icons-row i {
+			margin: 0 15px;
+			color: #00adb5;
+			transition: transform 0.3s ease;
+		}
+
+		.icons-row i:hover {
+			transform: scale(1.2);
+		}
+
+		@keyframes fadeIn {
+			from { opacity: 0; transform: translateY(10px); }
+			to { opacity: 1; transform: translateY(0); }
+		}
+
+		.about-container {
+			display: flex;
+			flex-direction: row-reverse;
+			align-items: center;
+			justify-content: space-between;
+			gap: 30px;
+			flex-wrap: wrap;
+			
+			
+		}
+
+		.about-text {
+			flex: 1;
+			min-width: 250px;
+		}
+		
+		.profile-pic {
+			width: 210px;
+			height: auto;
+			border-radius: 6px;
+			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+		}
+
+		#education, #experience {
+			margin-top: 40px;
+			padding: 10px 0;
+		}
+
+		#education h3, #experience h3 {
+			font-size: 1.5em;
+			margin-bottom: 10px;
+		}
+
+		#education ul, #experience ul {
+			list-style-type: disc;
+			padding-left: 20px;
+		}
+
+		#education li, #experience li {
+			margin-bottom: 15px;
+		}
+
+		.section-title {
+			font-size: 1.8em;
+			margin-top: 50px;
+			margin-bottom: 20px;
+			color: #00adb5;
+			border-bottom: 2px solid #ddd;
+			padding-bottom: 5px;
+		}
+
+		.timeline-entry {
+			background-color: #f7f7f7;
+			padding: 15px 20px;
+			margin-bottom: 20px;
+			border-left: 4px solid #00adb5;
+			border-radius: 6px;
+  			box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+		}
+
+		.timeline-entry h4 {
+  			margin-bottom: 5px;
+  			color: #333;
+			text-align: center;
+			font-size: 1.3em;
+			font-weight: bold;
+		}
+
+		.timeline-entry p {
+  			margin: 0 0 10px;
+  			font-size: 0.95em;
+			text-align: left;
+		}
+
+		.timeline-entry ul {
+  			padding-left: 0;
+  			margin-left: 0;
+  			list-style-position: outside;
+			text-align: left;
+		}
+		.timeline-entry li {
+			list-style-position: outside; /* Ensures text starts right after bullet */
+			text-indent: 0;         /* Removes indent */
+  			padding-left: 0;        /* Removes extra spacing from bullet */
+  			margin-left: 0;
+			text-align: left;
+			     
+		}	
+
+		.resume-button a.button.large {
+  			background-color: #00adb5;
+  			color: white;
+  			padding: 3px 2apx;
+  			margin: 10px;
+  			border-radius: 8px;
+  			text-decoration: none;
+  			font-weight: 600;
+  			font-size: 1em;
+  			transition: transform 0.3s ease, background-color 0.3s ease;
+  			display: inline-block;
+  			box-shadow: 0 4px 12px #e4dddd;
+		}
+
+		.resume-button a.button.large:hover {
+  			background-color: #b6e8f0;
+  			transform: translateY(-3px);
+		}
+
+		.fade-in-scroll {
+  			opacity: 0;
+ 			transform: translateY(30px);
+  			transition: opacity 1s ease, transform 1s ease;
+		}
+
+		.fade-in-scroll.visible {
+  			opacity: 1;
+  			transform: translateY(0);
+		}
+
+		.view-resume {
+  			background-color: #f0f0f0;     /* light background */
+  			color: #007acc;                /* bold blue text */
+  			border: 2px solid #007acc;
+  			font-weight: bold;
+  			padding: 10px 24px;
+  			border-radius: 8px;
+  			transition: background 0.3s, color 0.3s, transform 0.2s;
+		}
+
+		.view-resume:hover {
+  				background-color: #007acc;
+  				color: white;
+  				transform: scale(1.05);
+			}
+
+		#success-message {
+			margin-top: 1em;
+			padding: 10px 15px;
+			background-color: #e6ffed;
+			color: #2e7d32;
+			border-left: 4px solid #2e7d32;
+			border-radius: 5px;
+			font-weight: 500;
+			transition: opacity 0.5s ease;
+			}
+
+			.hidden {
+			display: none;
+			}
+
+		
+
+		</style>
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+				const titles = [
+					"Data Analyst",
+					"Business Analyst",
+					"Sports Analyst",
+					"Systems Engineer"
+				];
+				let index =0;
+
+				function displayTitle() {
+					const titleElement = document.getElementById("job-title");
+					titleElement.textContent = titles[index];
+					index = (index + 1) % titles.length; 
+				}
+				
+				displayTitle();
+				setInterval(displayTitle, 2000);
+			});
+		</script>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+
+				<!-- Intro -->
+					<div id="intro">
+						<h1>Tejas Padavalamane</h1> 
+						<h2 class="job-title" id="job-title"> Data Analyst</h2>
+						<p class="welcome"> 👋 Hi there! Welcome to my portfolio</p>
+						<p class="subtext"> where data tell stories, and insights guide business decisions</p>
+						<ul class="actions">
+							<li><a href="#main" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+						</ul>
+					</div>
+
+				<!-- Header -->
+					<header id="header">
+						<a href="#" class="logo">Tejas Padavalamane</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li class="active"><a href="#intro">Projects</a></li>
+							<li><a href="#footer">Contact</a></li>
+							<li><a href="Documents/Tejas_Padavalamane_Resume_CP.pdf" target="_blank">📄 Resume</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/tejas-padavalamane-620675193/" target="_blank" class="icon brands alt fa-linkedin" title="LinkedIn"><span class="label">LinkedIn</span></a></li>
+ 							<li><a href="https://github.com/tejaspadavalamane" target="_blank" class="icon brands alt fa-github" title="GitHub"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Featured Post -->
+							<article class="post featured">
+								<header class="major">
+									<h2><a href="#">About me</a></h2>
+									<div class="about-container">
+										<p class="about-text">
+											I’m a data analyst focused on transforming raw data into actionable insights that support business strategy and performance. With experience in business intelligence and analytics, I use tools like SQL, Python, Power BI, and Excel to uncover trends, build predictive models, and develop dashboards that inform decision-making and drive measurable results.
+										</p>
+										<img src="images/DSC_2194.JPEG" alt="" class="profile-pic" />
+									</div> 
+								</header>
+								<!-- EDUCATION SECTION-->
+								<section id="education">
+									<h3 class="section-title">🎓 Education</h3>
+									<div class="timeline-entry">
+										<h4>Illinois Institute of Technology, Chicago</h4>
+										<p>
+											Master’s in Information Technology and Management<br>
+											Concentration: Data Analytics and Management (2023-2025)<br>
+											GPA: 3.88/4.0</p>
+									  </div>
+									  <div class="timeline-entry">
+										<h4>K.S. Institute of Technology, Bengaluru</h4>
+										<p>Bachelor of Engineering — Electronics & Communication (2016–2020)<br>
+										GPA: 3.39/4.0</p>
+									  </div>
+								</section>
+								<!-- EXPERIENCE SECTION-->
+								<section id="experience">
+									<h3 class="section-title">💼 Experience</h3>
+									<div class="timeline-entry">
+										<h4>Infosys – Systems Engineer</h4>
+										<p><em>Apr 2022 – Aug 2023</em></p>
+										<ul>
+										  <li>Improved SQL query efficiency and reduced incident tickets by 25%, supporting data integrity and timely reporting.</li>
+										  <li>Collaborated with cross-functional teams to resolve data pipeline issues using tools like JIRA, Splunk, and Procmon.</li>
+										</ul>
+									</div>
+									  <div class="timeline-entry">
+										<h4>HUDL India – Sports Analyst</h4>
+										<p><em>Jun 2021 – Mar 2022</em></p>
+										<ul>
+										  <li>Analyzed 2000+ professional matches using structured frameworks to identify key performance metrics.</li>
+										  <li>Built Power BI dashboards to visualize team and player performance, increasing reporting accuracy to 94%.</li>
+										  <li>Provided real-time match data that supported strategic decisions in NCAA and NFL-level analytics.</li>
+										</ul>
+									  </div>
+									  <div class="timeline-entry">
+										<h4>XYID Pvt. Ltd – Data Analyst Intern</h4>
+										<p><em>Aug 2020 – Jun 2021</em></p>
+										<ul>
+										  <li>Built Power BI dashboards that reduced reporting time by 30%.</li>
+										  <li>Cleaned and transformed large datasets using SQL and Python to uncover trends and patterns.</li>
+										</ul>
+									  </div>
+								</section>
+								<!-- Resume Button-->
+								 <div class="resume-button fade-in-scroll" style="display: flex; justify-content: center; align-items: center; height: 100px; margin-top: 40px; ">
+									<a href="Documents/Tejas_Padavalamane_Resume_CP.pdf" target="_blank" class="button large view-resume" title="Open in new tab">
+										📄 View My Resume
+									</a>
+									<!--<a href="Documents/Tejas_Padavalamane_Resume_CP.pdf" download class="button large download-resume" title="Download a copy">
+										⬇️ Download Resume
+									  </a> -->
+								 </div>
+							</article>
+
+						<!-- Posts -->
+							<section class="posts">
+								<!-- IMDB MOVIE DATA ANALYSIS USING R-->
+								<article>
+									<header>
+										<h2><a href="https://github.com/tejaspadavalamane/Projects/tree/main/IMDB%20Movie%20Data%20Analysis%20Using%20R" target="_blank">IMDB Movie Data Analysis Using R<br />
+										</a></h2>
+									</header>
+									<a href="https://github.com/tejaspadavalamane/Projects/tree/main/IMDB%20Movie%20Data%20Analysis%20Using%20R" target="_blank" class="image fit"><img src="images/Portfolio image.png" alt="" /></a>
+									<p>Conducted an end-to-end analysis of IMDB movie data using <strong>R</strong>. Cleaned and transformed datasets with <strong>dplyr</strong> and <strong>tidyr</strong>, and created insightful visualizations with <strong>ggplot2</strong>. Explored trends in ratings, genres, and runtimes to deliver data-driven insights through a polished HTML report.</p>
+									<ul class="actions special">
+										<li><a href="https://github.com/tejaspadavalamane/Projects/tree/main/IMDB%20Movie%20Data%20Analysis%20Using%20R" target="_blank" class="button"> View Project</a></li>
+									</ul>
+								</article>
+								<!-- Crypto currency-->
+								<article>
+									<header>
+										<h2><a href="https://github.com/tejaspadavalamane/Projects/tree/main/Cryptocurrency%20Price%20%26%20Volatility%20Prediction" target="_blank">Cryptocurrency Price & Volatility Prediction<br />
+										</a></h2>
+									</header>
+									<a href="https://github.com/tejaspadavalamane/Projects/tree/main/Cryptocurrency%20Price%20%26%20Volatility%20Prediction" target="_blank" class="image fit"><img src="images/ChatGPT Image May 22, 2025, 10_55_30 PM.png" alt="" /></a>
+									<p>Analyzed historical <strong>OHLCV</strong> data from <strong>Bitcoin</strong>, <strong>Ethereum</strong>, and <strong>Litecoin</strong> to uncover trends and forecast market <strong>volatility</strong>. Applied <strong>data wrangling</strong>, <strong>exploratory analysis</strong>, and <strong>time series modeling</strong> using <strong>Python (Pandas, Scikit-learn, Matplotlib)</strong>. Combined <strong>LSTM</strong> and <strong>statistical methods</strong> to deliver insights for informed decision-making in volatile <strong>crypto markets</strong>.</p>
+									<ul class="actions special">
+										<li><a href="https://github.com/tejaspadavalamane/Projects/tree/main/Cryptocurrency%20Price%20%26%20Volatility%20Prediction" target="_blank" class="button">View Project</a></li>
+									</ul>
+								</article>
+								<article>
+									<header>
+									<!-- Modern Data Warehouse-->
+										<h2><a href="https://github.com/tejaspadavalamane/Projects/tree/main/Modern%20Data%20Warehouse" target="_blank"> Modern Data Warehouse Implementation<br />
+										</a></h2>
+									</header>
+									<a href="https://github.com/tejaspadavalamane/Projects/tree/main/Modern%20Data%20Warehouse" target="_blank" class="image fit"><img src="images/MDW.png" alt="" /></a>
+									<p>Built a scalable analytics pipeline using <strong>Azure Synapse</strong> , <strong>Data Factory</strong>, <strong>SQL</strong>, and <strong>Power BI</strong>. Transformed Excel-based sales data through <strong>cleaning</strong>, <strong>modeling</strong>, and <strong>visualization</strong> to deliver actionable insights and uncover performance trends.</p>
+									<ul class="actions special">
+										<li><a href="https://github.com/tejaspadavalamane/Projects/tree/main/Modern%20Data%20Warehouse" target="_blank" class="button">View Project</a></li>
+									</ul>
+								</article>
+								<!-- 
+								<article>
+									<header>
+										
+										<h2><a href="#">Tempus sed<br />
+										nulla imperdiet</a></h2>
+									</header>
+									<a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
+									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+									<ul class="actions special">
+										<li><a href="#" class="button">Full Story</a></li>
+									</ul>
+								</article>
+								<article>
+									<header>
+										<span class="date">April 11, 2017</span>
+										<h2><a href="#">Odio magna<br />
+										sed consectetur</a></h2>
+									</header>
+									<a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
+									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+									<ul class="actions special">
+										<li><a href="#" class="button">Full Story</a></li>
+									</ul>
+								</article>
+								<article>
+									<header>
+										<span class="date">April 7, 2017</span>
+										<h2><a href="#">Augue lorem<br />
+										primis vestibulum</a></h2>
+									</header>
+									<a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
+									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+									<ul class="actions special">
+										<li><a href="#" class="button">Full Story</a></li>
+									</ul>
+								</article>
+							</section>
+							-->
+						</div>
+					
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							 <p style="text-align: center; margin-bottom: 20px; font-size: 1.1em; color: #333; font-style: italic;">
+								📬 Have a question, opportunity, or feedback? Drop me a message below — I’d love to hear from you!
+								</p>
+							<form id="contact-form" action="https://formspree.io/f/xeogblpy" method="POST">								<input type="hidden" name="_captcha" value="false">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" required />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" required />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3"> </textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+							<p id="success-message" style="display:none; color: green; margin-top: 10px;">
+  								✅ Your message has been sent successfully!
+							</p>
+						</section>
+						<!-- CONTACT-->
+						<section class="split contact">
+							<section class="alt">
+								<h3>Location</h3>
+								<p>Chicago, IL 60616</p>
+							</section>
+							<section>
+								<h3>Phone</h3>
+								<p><a>(312) 866-9378</a></p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="https://outlook.office.com/mail/deeplink/compose?to=tpadavalamane@hawk.iit.edu" target="_blank">tpadavalamane@hawk.iit.edu</a></p>
+
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+  									<li><a href="https://www.linkedin.com/in/tejas-padavalamane-620675193/" target="_blank" class="icon brands alt fa-linkedin" title="LinkedIn"><span class="label">LinkedIn</span></a></li>
+ 									<li><a href="https://github.com/tejaspadavalamane" target="_blank" class="icon brands alt fa-github" title="GitHub"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+			<script>
+				const fadeEl = document.querySelector('.fade-in-scroll');
+			  
+				window.addEventListener('scroll', () => {
+				  const rect = fadeEl.getBoundingClientRect();
+				  if (rect.top < window.innerHeight - 100) {
+					fadeEl.classList.add('visible');
+				  }
+				});
+			  </script>
+
+			 <script>
+			const form = document.getElementById("contact-form");
+			const successMessage = document.getElementById("success-message");
+
+			form.addEventListener("submit", async function (event) {
+				event.preventDefault(); // Prevent default form submission
+
+				const formData = new FormData(form);
+
+				const response = await fetch(form.action, {
+				method: form.method,
+				body: formData,
+				headers: {
+					Accept: "application/json"
+				}
+				});
+
+				if (response.ok) {
+				form.reset();
+				successMessage.style.display = "block";
+				successMessage.textContent = "✅ Your message has been sent successfully!";
+				successMessage.style.color = "green";
+				} else {
+				successMessage.style.display = "block";
+				successMessage.textContent = "❌ Something went wrong. Please try again.";
+				successMessage.style.color = "red";
+				}
+			});
+			</script>
+
+	</body>
+</html>
